@@ -1,4 +1,3 @@
-// routes/index.js
 import express from "express";
 import axios from "axios";
 import { authenticate } from "../middleware/authMiddleware.js";
@@ -6,39 +5,45 @@ import logger from "../config/logger.js";
 
 const router = express.Router();
 
-const USER_SERVICE = process.env.USER_SERVICE_URL;
+const USER_SERVICE = process.env.USER_SERVICE_URL; 
 const WALLET_SERVICE = process.env.WALLET_SERVICE_URL;
 
-const forwardTo = (serviceUrl, prefix) => async (req, res, next) => {
+const forwardTo = (serviceBaseUrl) => async (req, res) => {
   try {
-    // req.url contains everything AFTER the matched route (e.g., /balance)
-    // prefix is the base (e.g., /wallet)
-    const url = `${serviceUrl}${prefix}${req.url}`;
+    // req.baseUrl is "/api/auth" or "/api/wallet"
+    // req.url is the rest (e.g., "/register" or "/balance")
+    
+    // Step 1: Strip "/api" from the base to get the service path (/auth or /wallet)
+    const servicePath = req.baseUrl.replace('/api', ''); 
+    const url = `${serviceBaseUrl}${servicePath}${req.url}`;
 
-    logger.info(`[Gateway] Forwarding ${req.method} ${req.originalUrl} -> ${url}`);
+    logger.info(`[Gateway] Proxying ${req.method} to: ${url}`);
 
     const response = await axios({
       method: req.method,
-      url,
-      data: req.body,
-      headers: { 
-        ...req.headers, 
-        host: new URL(serviceUrl).host 
-      },
+      url: url,
+      data: req.body, // The registration/login data
+      params: req.query,
+      headers: {
+        // Essential: Pass the Authorization token if it exists
+        Authorization: req.headers.authorization || "",
+        "Content-Type": "application/json"
+      }
     });
 
     res.status(response.status).json(response.data);
   } catch (err) {
     const status = err.response?.status || 500;
-    const data = err.response?.data || { error: "Service Unavailable" };
+    const data = err.response?.data || { error: "Backend Service Error" };
     
-    logger.error(`[Gateway Error] ${err.method} ${req.originalUrl} -> ${err.message}`);
+    logger.error(`[Gateway Error] ${status} from ${err.config?.url}`);
     res.status(status).json(data);
   }
 };
 
-// Mount the services with their specific base prefixes
-router.use("/auth", forwardTo(USER_SERVICE, "/auth"));
-router.use("/wallet", authenticate, forwardTo(WALLET_SERVICE, "/wallet"));
+// IMPORTANT: Do NOT add a prefix in the forwardTo() call anymore.
+// The logic above handles it automatically using the mount point.
+router.use("/auth", forwardTo(USER_SERVICE));
+router.use("/wallet", authenticate, forwardTo(WALLET_SERVICE));
 
 export default router;
