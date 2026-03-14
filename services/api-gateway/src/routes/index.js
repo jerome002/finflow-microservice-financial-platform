@@ -5,22 +5,22 @@ import logger from "../config/logger.js";
 
 const router = express.Router();
 
-const USER_SERVICE = process.env.USER_SERVICE_URL;
-const WALLET_SERVICE = process.env.WALLET_SERVICE_URL;
-const TRANSACTION_SERVICE = process.env.TRANSACTION_SERVICE_URL;
+// Ensure URLs are stripped of trailing slashes
+const USER_SERVICE = process.env.USER_SERVICE_URL?.replace(/\/$/, "");
+const WALLET_SERVICE = process.env.WALLET_SERVICE_URL?.replace(/\/$/, "");
+const TRANSACTION_SERVICE = process.env.TRANSACTION_SERVICE_URL?.replace(/\/$/, "");
 
 /**
  * forwardTo - A robust proxy handler
- * @param {string} serviceBaseUrl - The root URL of the microservice
- * @param {string} forcedPrefix - The prefix the microservice expects (e.g., /auth or /wallet)
+ * Handles internal communication and translates Gateway paths to Service paths
  */
-const forwardTo = (serviceBaseUrl, forcedPrefix) => async (req, res) => {
-    // If req.url is "/balance", and forcedPrefix is "/wallet", 
-    // result is https://service.com/wallet/balance
-    const url = `${serviceBaseUrl.replace(/\/$/, "")}${forcedPrefix}${req.url}`;
+const forwardTo = (serviceBaseUrl, forcedPrefix = "") => async (req, res) => {
+    // If frontend hits /api/auth/login, req.url is "/login"
+    // Final URL: https://service.com/auth/login
+    const url = `${serviceBaseUrl}${forcedPrefix}${req.url}`;
 
     try {
-        logger.info(`[Gateway] Proxying ${req.method} ${req.originalUrl} -> ${url}`);
+        logger.info(`[Gateway] ${req.method} ${req.originalUrl} -> ${url}`);
 
         const response = await axios({
             method: req.method,
@@ -28,17 +28,25 @@ const forwardTo = (serviceBaseUrl, forcedPrefix) => async (req, res) => {
             data: req.body,
             params: req.query,
             headers: {
-                // Pass the JWT token for the backend to verify if needed
+                // Critical: Pass the Bearer token for the sub-service to verify
                 Authorization: req.headers.authorization || "",
                 "Content-Type": "application/json"
             },
-            // Prevent long-hanging requests
-            timeout: 15000 
+            // 30 second timeout - crucial for Render Free Tier "cold starts"
+            timeout: 30000 
         });
 
         return res.status(response.status).json(response.data);
     } catch (err) {
-        const status = err.response?.status || 500;
+        // Handle Timeout specifically for Render
+        if (err.code === 'ECONNABORTED') {
+            return res.status(504).json({
+                error: "Gateway Timeout",
+                details: "The microservice is taking too long to wake up. Please try again."
+            });
+        }
+
+        const status = err.response?.status || 502;
         const errorData = err.response?.data || { message: err.message };
 
         logger.error(`[Gateway Error] ${status} from ${url}: ${JSON.stringify(errorData)}`);
@@ -52,19 +60,15 @@ const forwardTo = (serviceBaseUrl, forcedPrefix) => async (req, res) => {
 
 // --- ROUTES MOUNTING ---
 
-// 1. Auth Routes
-// Frontend sends: /api/auth/register -> Gateway forwards to: USER_SERVICE/auth/register
+// 1. Auth & Profile (Maps to User Service)
 router.use("/auth", forwardTo(USER_SERVICE, "/auth"));
-
-// 2. Profile Routes
 router.use("/profile", authenticate, forwardTo(USER_SERVICE, "/profile"));
 
-// 3. Wallet Routes
-// Frontend sends: /api/wallet/balance -> Gateway forwards to: WALLET_SERVICE/wallet/balance
-// Note: We explicitly use "/wallet" here because the Wallet Service expects its routes 
-// to be prefixed with /wallet internally.
+// 2. Wallet (Maps to Wallet Service)
+// Note: Wallet Service uses app.use("/wallet", ...)
 router.use("/wallet", authenticate, forwardTo(WALLET_SERVICE, "/wallet"));
-// 4. Transactions Routes 
+
+// 3. Transactions (Maps to Transaction Service)
 router.use("/transactions", authenticate, forwardTo(TRANSACTION_SERVICE, "/transactions"));
 
 export default router;

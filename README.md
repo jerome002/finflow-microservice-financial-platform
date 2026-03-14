@@ -13,6 +13,22 @@ A modern, secure digital banking and financial management platform built with a 
 - **API Gateway**: Centralized routing and authentication proxy
 - **Database Security**: Distributed MongoDB with proper access controls
 
+## 🚀 Live Demo
+
+Experience FinFlow in action! The application is deployed on Render with the following services:
+
+- **Frontend**: [https://finflow-frontend-j8xm.onrender.com](https://finflow-frontend-j8xm.onrender.com)
+- **API Gateway**: [https://finflow-api-gateway.onrender.com](https://finflow-api-gateway.onrender.com)
+- **User Service**: [https://finflow-user-service.onrender.com](https://finflow-user-service.onrender.com)
+- **Wallet Service**: [https://finflow-wallet-service.onrender.com](https://finflow-wallet-service.onrender.com)
+- **Transaction Service**: [https://finflow-transaction-service.onrender.com](https://finflow-transaction-service.onrender.com)
+
+### Try It Out
+1. Visit the [Frontend URL](https://finflow-frontend-j8xm.onrender.com)
+2. Register a new account
+3. Create a wallet and perform transactions
+4. View your transaction history
+
 ## Architecture
 
 ```
@@ -104,7 +120,22 @@ npm start
 #### Environment Variables
 Create `.env` files in each service directory with:
 
-**api-gateway/.env**
+**For Local Development:**
+```
+# Local .env files use localhost URLs as shown above
+```
+
+**For Production Deployment (Render):**
+- **API Gateway**:
+  - `USER_SERVICE_URL=https://finflow-user-service.onrender.com`
+  - `WALLET_SERVICE_URL=https://finflow-wallet-service.onrender.com`
+  - `TRANSACTION_SERVICE_URL=https://finflow-transaction-service.onrender.com`
+  - `FRONTEND_URL=https://finflow-frontend-j8xm.onrender.com`
+
+- **Frontend**:
+  - `VITE_GATEWAY_URL=https://finflow-api-gateway.onrender.com/api`
+
+**api-gateway/.env** (Local)
 ```
 PORT=5000
 JWT_SECRET=your-secret-key
@@ -114,7 +145,7 @@ TRANSACTION_SERVICE_URL=http://localhost:5003
 FRONTEND_URL=http://localhost:5173
 ```
 
-**user-service/.env**
+**user-service/.env** (Local)
 ```
 PORT=5001
 JWT_SECRET=your-secret-key
