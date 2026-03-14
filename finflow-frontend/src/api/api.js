@@ -4,7 +4,7 @@ import axios from 'axios';
 const GATEWAY_URL = import.meta.env.VITE_GATEWAY_URL || 'http://localhost:5000/api';
 
 export const authAPI = axios.create({ 
-  baseURL: `${GATEWAY_URL}/auth` 
+  baseURL: `${GATEWAY_URL}` 
 });
 
 export const walletAPI = axios.create({ 
