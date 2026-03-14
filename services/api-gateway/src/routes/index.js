@@ -7,6 +7,7 @@ const router = express.Router();
 
 const USER_SERVICE = process.env.USER_SERVICE_URL;
 const WALLET_SERVICE = process.env.WALLET_SERVICE_URL;
+const TRANSACTION_SERVICE = process.env.TRANSACTION_SERVICE_URL;
 
 /**
  * forwardTo - A robust proxy handler
@@ -55,10 +56,15 @@ const forwardTo = (serviceBaseUrl, forcedPrefix) => async (req, res) => {
 // Frontend sends: /api/auth/register -> Gateway forwards to: USER_SERVICE/auth/register
 router.use("/auth", forwardTo(USER_SERVICE, "/auth"));
 
-// 2. Wallet Routes
+// 2. Profile Routes
+router.use("/profile", authenticate, forwardTo(USER_SERVICE, "/profile"));
+
+// 3. Wallet Routes
 // Frontend sends: /api/wallet/balance -> Gateway forwards to: WALLET_SERVICE/wallet/balance
 // Note: We explicitly use "/wallet" here because the Wallet Service expects its routes 
 // to be prefixed with /wallet internally.
 router.use("/wallet", authenticate, forwardTo(WALLET_SERVICE, "/wallet"));
+// 4. Transactions Routes 
+router.use("/transactions", authenticate, forwardTo(TRANSACTION_SERVICE, "/transactions"));
 
 export default router;

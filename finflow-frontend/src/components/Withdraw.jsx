@@ -22,7 +22,7 @@ export default function Withdraw() {
         amount: parseFloat(amount) 
       });
 
-      setMessage({ type: "success", text: `Successfully withdrew $${amount}!` });
+      setMessage({ type: "success", text: `Successfully withdrew Ksh ${amount}!` });
       
       // Redirect to dashboard after a short delay
       setTimeout(() => navigate("/dashboard"), 2000);
@@ -48,7 +48,7 @@ export default function Withdraw() {
               Amount to Withdraw
             </label>
             <div className="relative">
-              <span className="absolute left-3 top-2 text-gray-500 font-semibold">$</span>
+              <span className="absolute left-3 top-2 text-gray-500 font-semibold">Ksh</span>
               <input
                 className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none"
                 type="number"

@@ -99,3 +99,7 @@
 2026-03-13T14:34:15.821Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
 2026-03-13T14:34:31.491Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
 2026-03-13T14:34:31.501Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-14T14:23:03.730Z [[31merror[39m]: [Gateway Error] 500 from https://finflow-user-service.onrender.com || http://localhost:5001/auth/login: {"message":"Invalid URL"}
+2026-03-14T14:23:05.282Z [[31merror[39m]: [Gateway Error] 500 from https://finflow-user-service.onrender.com || http://localhost:5001/auth/login: {"message":"Invalid URL"}
+2026-03-14T14:23:13.901Z [[31merror[39m]: [Gateway Error] 500 from https://finflow-user-service.onrender.com || http://localhost:5001/auth/login: {"message":"Invalid URL"}
+2026-03-14T14:29:47.780Z [[31merror[39m]: [Gateway Error] 500 from https://finflow-user-service.onrender.com || http://localhost:5001/auth/login: {"message":"Invalid URL"}

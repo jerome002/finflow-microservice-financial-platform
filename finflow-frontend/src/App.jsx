@@ -11,6 +11,7 @@ import Deposit from "./components/Deposit";
 import Withdraw from "./components/Withdraw";
 import Transfer from "./components/Transfer";
 import Home from "./components/Home";
+import Activity from "./pages/Activity";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/deposit" element={<PrivateRoute><Deposit /></PrivateRoute>} />
             <Route path="/withdraw" element={<PrivateRoute><Withdraw /></PrivateRoute>} />
             <Route path="/transfer" element={<PrivateRoute><Transfer /></PrivateRoute>} />
+            <Route path="/activity" element={<PrivateRoute><Activity /></PrivateRoute>} />
           </Routes>
         </div>
       </Router>

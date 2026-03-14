@@ -23,7 +23,11 @@ export default function Navbar() {
         <div className="flex items-center gap-8">
           {token ? (
             <>
-              <Link to="/dashboard" className="text-sm font-semibold text-gray-600 hover:text-blue-600">Overview</Link>
+              <Link to="/dashboard" className="text-sm font-semibold text-gray-600 hover:text-blue-600">Dashboard</Link>
+              <Link to="/deposit" className="text-sm font-semibold text-gray-600 hover:text-blue-600">Deposit</Link>
+              <Link to="/withdraw" className="text-sm font-semibold text-gray-600 hover:text-blue-600">Withdraw</Link>
+              <Link to="/transfer" className="text-sm font-semibold text-gray-600 hover:text-blue-600">Transfer</Link>
+              <Link to="/activity" className="text-sm font-semibold text-gray-600 hover:text-blue-600">Activity</Link>
               <button 
                 onClick={handleLogout}
                 className="text-sm font-bold text-red-500 hover:bg-red-50 px-3 py-1 rounded-md transition"

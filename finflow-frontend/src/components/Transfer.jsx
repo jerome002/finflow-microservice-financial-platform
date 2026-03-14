@@ -1,7 +1,7 @@
 import { useState } from "react";
-// FIX: Named import for the Wallet Service (Port 5001)
 import { walletAPI } from "../api/api"; 
 import { useNavigate } from "react-router-dom";
+import { Send, Mail, CircleDollarSign, AlertCircle, CheckCircle2 } from "lucide-react";
 
 export default function Transfer() {
   const [recipientEmail, setRecipientEmail] = useState("");
@@ -12,21 +12,24 @@ export default function Transfer() {
 
   const handleTransfer = async (e) => {
     e.preventDefault();
-    if (!amount || amount <= 0) return alert("Enter a valid amount");
+    if (!amount || amount <= 0) return;
 
     setLoading(true);
     setMessage({ type: "", text: "" });
 
     try {
-      // FIX: Use walletAPI to ensure it hits Port 5001
+      // Hits the Gateway -> Wallet Service
       await walletAPI.post("/wallet/transfer", { 
         toEmail: recipientEmail, 
         amount: parseFloat(amount) 
       });
 
-      setMessage({ type: "success", text: `Successfully transferred $${amount} to ${recipientEmail}!` });
+      setMessage({ 
+        type: "success", 
+        text: `Successfully transferred Ksh ${amount} to ${recipientEmail}!` 
+      });
       
-      // Redirect back to dashboard after a success
+      // Redirect to dashboard after a success
       setTimeout(() => navigate("/dashboard"), 2500);
     } catch (err) {
       console.error("Transfer Error:", err);
@@ -41,28 +44,45 @@ export default function Transfer() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
-      <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Transfer Money</h2>
+      <div className="bg-white p-8 rounded-[2.5rem] shadow-xl w-full max-w-md border border-gray-100">
+        
+        {/* Header */}
+        <div className="flex flex-col items-center mb-8">
+          <div className="bg-indigo-50 p-4 rounded-2xl mb-4 text-indigo-600">
+            <Send size={32} />
+          </div>
+          <h2 className="text-2xl font-black text-gray-800 text-center">Transfer Money</h2>
+          <p className="text-gray-500 text-sm">Send funds instantly via email</p>
+        </div>
 
-        <form onSubmit={handleTransfer}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Recipient Email</label>
-            <input
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
-              type="email"
-              placeholder="friend@example.com"
-              value={recipientEmail}
-              onChange={(e) => setRecipientEmail(e.target.value)}
-              required
-            />
+        <form onSubmit={handleTransfer} className="space-y-5">
+          {/* Email Input */}
+          <div>
+            <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">
+              Recipient Email
+            </label>
+            <div className="relative">
+              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300" size={20} />
+              <input
+                className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-none transition"
+                type="email"
+                placeholder="friend@example.com"
+                value={recipientEmail}
+                onChange={(e) => setRecipientEmail(e.target.value)}
+                required
+              />
+            </div>
           </div>
 
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Amount</label>
+          {/* Amount Input */}
+          <div>
+            <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">
+              Amount (Ksh)
+            </label>
             <div className="relative">
-              <span className="absolute left-3 top-2 text-gray-500 font-semibold">$</span>
+              <CircleDollarSign className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300" size={20} />
               <input
-                className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+                className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl text-xl font-bold focus:ring-2 focus:ring-indigo-500 outline-none transition"
                 type="number"
                 placeholder="0.00"
                 value={amount}
@@ -72,31 +92,37 @@ export default function Transfer() {
             </div>
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full py-3 rounded-lg font-bold text-white transition ${
-              loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
-            }`}
-          >
-            {loading ? "Processing..." : "Send Money"}
-          </button>
-        </form>
+          {/* Feedback Message */}
+          {message.text && (
+            <div className={`flex items-center gap-3 p-4 rounded-2xl text-sm font-bold ${
+              message.type === "success" ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"
+            }`}>
+              {message.type === "success" ? <CheckCircle2 size={20} /> : <AlertCircle size={20} />}
+              <p>{message.text}</p>
+            </div>
+          )}
 
-        {message.text && (
-          <div className={`mt-4 p-3 rounded-lg text-center text-sm font-medium ${
-            message.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
-          }`}>
-            {message.text}
+          {/* Action Buttons */}
+          <div className="pt-2">
+            <button
+              type="submit"
+              disabled={loading}
+              className={`w-full py-4 rounded-2xl font-black text-white shadow-lg transition shadow-indigo-100 ${
+                loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
+              }`}
+            >
+              {loading ? "Processing..." : "Confirm Transfer"}
+            </button>
+            
+            <button 
+              type="button"
+              onClick={() => navigate("/dashboard")}
+              className="w-full mt-4 text-gray-400 font-bold text-sm hover:text-gray-600 transition"
+            >
+              Cancel
+            </button>
           </div>
-        )}
-
-        <button 
-          onClick={() => navigate("/dashboard")}
-          className="w-full mt-4 text-gray-500 text-sm hover:underline text-center"
-        >
-          Cancel
-        </button>
+        </form>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export default function Deposit() {
         amount: parseFloat(amount) 
       });
 
-      setMessage({ type: "success", text: `Successfully deposited $${amount}!` });
+      setMessage({ type: "success", text: `Successfully deposited Ksh ${amount}!` });
       
       // Optional: Redirect back to dashboard after 2 seconds
       setTimeout(() => navigate("/dashboard"), 2000);
@@ -48,7 +48,7 @@ export default function Deposit() {
               Amount to Deposit
             </label>
             <div className="relative">
-              <span className="absolute left-3 top-2 text-gray-500 font-semibold">$</span>
+              <span className="absolute left-3 top-2 text-gray-500 font-semibold">Ksh</span>
               <input
                 className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                 type="number"
