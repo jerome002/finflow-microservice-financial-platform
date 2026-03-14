@@ -30,15 +30,19 @@ const forwardTo = (serviceBaseUrl, serviceNamespace) => async (req, res) => {
     res.status(response.status).json(response.data);
   } catch (err) {
     const status = err.response?.status || 500;
-    const errorData = err.response?.data || { error: "Service Error" };
+    const message = err.response?.data?.message || err.message;
     
-    logger.error(`[Gateway Error] ${status} from ${url}: ${JSON.stringify(errorData)}`);
-    res.status(status).json(errorData);
+    logger.error(`[Gateway Error] Target: ${url} | Status: ${status} | Message: ${message}`);
+    
+    res.status(status).json({ 
+      error: "Service Error", 
+      details: message 
+    });
   }
 };
 
 // MOUNTING
 router.use("/auth", forwardTo(USER_SERVICE, "/auth"));
-router.use("/wallet", authenticate, forwardTo(WALLET_SERVICE, "/wallet"));
+router.use("/wallet", authenticate, forwardTo(WALLET_SERVICE, ""));
 
 export default router;
