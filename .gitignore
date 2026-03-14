@@ -1,0 +1,14 @@
+# Node dependencies
+**/node_modules/
+
+# Security: Ignore all secret files
+**/.env
+**/.env.local
+
+# Build folders
+**/dist/
+**/build/
+
+# OS files
+.DS_Store
+Thumbs.db

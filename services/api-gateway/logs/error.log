@@ -1,0 +1,101 @@
+2026-03-13T10:51:30.573Z [[31merror[39m]: [Auth] Error for user: anonymous - Request failed with status code 404
+2026-03-13T10:51:30.575Z [[31merror[39m]: POST /auth/register - Request failed with status code 404
+2026-03-13T11:45:36.632Z [[31merror[39m]: [Auth] Error for user: anonymous - Request failed with status code 404
+2026-03-13T11:45:36.633Z [[31merror[39m]: POST /auth/login - Request failed with status code 404
+2026-03-13T12:43:40.199Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T12:43:40.201Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T12:43:40.415Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T12:43:40.418Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T12:43:47.839Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T12:43:47.842Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T12:49:45.060Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T12:49:47.135Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T12:51:29.094Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T12:51:30.112Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:01:14.901Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:33.055Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:39.358Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:41.037Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:43.189Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:29.965Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:30.074Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:38.642Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:54.232Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:13:22.803Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:15:23.912Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:23.916Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T13:15:23.940Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:23.942Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T13:15:30.942Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:30.943Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:15:44.767Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:44.767Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:07.921Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:07.922Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:09.229Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:09.231Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:10.204Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:10.206Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:11.658Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:11.660Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:12.345Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:12.347Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:13.225Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:13.227Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:30.303Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - 
+2026-03-13T13:18:30.304Z [[31merror[39m]: POST /api/wallet/deposit - 
+2026-03-13T13:18:32.692Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:32.693Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:57.682Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:57.683Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T14:06:55.432Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:08:23.375Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:08:39.054Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:08:39.549Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:09:10.562Z [[31merror[39m]: [Gateway Error] read ECONNRESET
+2026-03-13T14:09:10.570Z [[31merror[39m]: [Gateway Error] read ECONNRESET
+2026-03-13T14:11:29.914Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:11:39.099Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:14:05.146Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:05.161Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:07.431Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:07.452Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:09.284Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:09.306Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:26.443Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:26.455Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:15:33.971Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:15:33.981Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:15:41.577Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:18:00.384Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:00.394Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:03.393Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:03.420Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:04.619Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:04.645Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:19.044Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:19.054Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:10.110Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:13.623Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:13.637Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:14.872Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:14.888Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:29.159Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:29.175Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:30.458Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:30.490Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:25:37.439Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:25:37.578Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:25:45.882Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:29:40.935Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> Request failed with status code 404
+2026-03-13T14:29:42.009Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> Request failed with status code 404
+2026-03-13T14:31:22.420Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:22.462Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:32.284Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:32.297Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:36.038Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/create -> Request failed with status code 404
+2026-03-13T14:31:46.788Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/create -> Request failed with status code 404
+2026-03-13T14:34:15.779Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:34:15.821Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:34:31.491Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:34:31.501Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404

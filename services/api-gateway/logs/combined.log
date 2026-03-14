@@ -1,0 +1,306 @@
+2026-03-13T09:09:40.538Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T09:10:26.736Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T09:10:32.720Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T10:49:16.782Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T10:51:30.097Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/register
+2026-03-13T10:51:30.573Z [[31merror[39m]: [Auth] Error for user: anonymous - Request failed with status code 404
+2026-03-13T10:51:30.575Z [[31merror[39m]: POST /auth/register - Request failed with status code 404
+2026-03-13T11:16:03.048Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T11:16:13.838Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T11:16:57.291Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/register
+2026-03-13T11:22:33.476Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:43.236Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:50.518Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:51.809Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:52.410Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:57.569Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:57.984Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:58.199Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:22:59.743Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:23:12.227Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:23:12.409Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:23:12.800Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:45.937Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:48.106Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:48.772Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:49.253Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:49.553Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:50.721Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:29:51.258Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:08.574Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:11.354Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:11.570Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:11.753Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:11.946Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:12.115Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:12.649Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:12.969Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:13.209Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:13.645Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:55.373Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:55.851Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:56.042Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:30:56.274Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:00.451Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:00.650Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:00.818Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:00.994Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:01.141Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:01.306Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:01.522Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:01.715Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:01.889Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:02.160Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:02.226Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:03.154Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:03.331Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:03.690Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:03.906Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:04.025Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:04.394Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:04.569Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:04.738Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:04.921Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:06.108Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:06.290Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:06.473Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:06.666Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:06.866Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:07.266Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:07.546Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:07.657Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:08.137Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:08.394Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:09.346Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:09.521Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:09.698Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:09.850Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:11.002Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:11.156Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:11.305Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:13.074Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:13.241Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:13.609Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:13.786Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:13.969Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:14.178Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:15.602Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:15.778Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:15.954Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:18.068Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:18.258Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:18.418Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:31:18.594Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:39:28.017Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T11:45:36.076Z [[32minfo[39m]: [Auth] User: anonymous - POST /auth/login
+2026-03-13T11:45:36.632Z [[31merror[39m]: [Auth] Error for user: anonymous - Request failed with status code 404
+2026-03-13T11:45:36.633Z [[31merror[39m]: POST /auth/login - Request failed with status code 404
+2026-03-13T12:28:04.311Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:28:16.283Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:28:25.630Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:32:49.720Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:33:05.375Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:42:19.690Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:43:36.133Z [[32minfo[39m]: [Auth] User: anonymous - POST /api/auth/login
+2026-03-13T12:43:37.216Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - GET /api/wallet/balance
+2026-03-13T12:43:40.199Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T12:43:40.201Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T12:43:40.210Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - GET /api/wallet/balance
+2026-03-13T12:43:40.415Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T12:43:40.418Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T12:43:47.054Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T12:43:47.839Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T12:43:47.842Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T12:48:36.879Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:49:44.926Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T12:49:45.060Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T12:49:47.071Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T12:49:47.135Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T12:50:22.049Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T12:51:28.968Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T12:51:29.094Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T12:51:30.105Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T12:51:30.112Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:01:08.766Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:01:14.564Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T13:01:14.901Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:02:52.050Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:08:20.312Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:08:32.823Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T13:08:33.055Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:39.260Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T13:08:39.358Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:40.942Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T13:08:41.037Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:08:43.079Z [[32minfo[39m]: Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T13:08:43.189Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:10:44.202Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:11:29.790Z [[32minfo[39m]: Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T13:11:29.965Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:29.976Z [[32minfo[39m]: Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T13:11:30.074Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:38.240Z [[32minfo[39m]: Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T13:11:38.642Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:11:54.227Z [[32minfo[39m]: Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T13:11:54.232Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:13:22.773Z [[32minfo[39m]: Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T13:13:22.803Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T13:15:00.678Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:15:10.048Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:15:13.300Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:15:16.697Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T13:15:19.449Z [[32minfo[39m]: [Auth] User: anonymous - POST /api/auth/login
+2026-03-13T13:15:21.657Z [[32minfo[39m]: [Auth] User: anonymous - POST /api/auth/login
+2026-03-13T13:15:23.901Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - GET /api/wallet/balance
+2026-03-13T13:15:23.912Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:23.916Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T13:15:23.935Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - GET /api/wallet/balance
+2026-03-13T13:15:23.940Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:23.942Z [[31merror[39m]: GET /api/wallet/balance - Request failed with status code 404
+2026-03-13T13:15:30.804Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:15:30.942Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:30.943Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:15:44.759Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:15:44.767Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:15:44.767Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:07.695Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:07.921Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:07.922Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:09.130Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:09.229Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:09.231Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:10.105Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:10.204Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:10.206Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:11.561Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:11.658Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:11.660Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:12.242Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:12.345Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:12.347Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:13.124Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:13.225Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:13.227Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:30.295Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:30.303Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - 
+2026-03-13T13:18:30.304Z [[31merror[39m]: POST /api/wallet/deposit - 
+2026-03-13T13:18:32.666Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:32.692Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:32.693Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T13:18:57.676Z [[32minfo[39m]: [Wallet] User: 69b3f22d54cb044de0ec06b5 - POST /api/wallet/deposit
+2026-03-13T13:18:57.682Z [[31merror[39m]: [Wallet] Error for user: 69b3f22d54cb044de0ec06b5 - Request failed with status code 404
+2026-03-13T13:18:57.683Z [[31merror[39m]: POST /api/wallet/deposit - Request failed with status code 404
+2026-03-13T14:01:27.988Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T14:06:54.501Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:06:55.432Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:08:23.348Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:08:23.375Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:08:34.893Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:08:36.803Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:08:39.054Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:08:39.070Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:08:39.549Z [[31merror[39m]: [Gateway Error] Request failed with status code 404
+2026-03-13T14:09:03.825Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:09:10.178Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:09:10.562Z [[31merror[39m]: [Gateway Error] read ECONNRESET
+2026-03-13T14:09:10.570Z [[31merror[39m]: [Gateway Error] read ECONNRESET
+2026-03-13T14:11:17.259Z [[32minfo[39m]: API Gateway running on port 5000
+2026-03-13T14:11:29.822Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:11:29.914Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:11:39.094Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:11:39.099Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:14:05.141Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:05.146Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:05.156Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:05.161Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:07.421Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:07.431Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:07.440Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:07.452Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:09.273Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:09.284Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:09.299Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:09.306Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:25.883Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:14:26.438Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:26.443Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:14:26.451Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:14:26.455Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:15:33.724Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:15:33.965Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:15:33.971Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:15:33.977Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:15:33.981Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:15:41.574Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:15:41.577Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:18:00.379Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:00.384Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:00.391Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:00.394Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:03.369Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:03.393Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:03.414Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:03.420Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:04.604Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:04.619Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:04.641Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:04.645Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:18.711Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:18:19.040Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:19.044Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:18:19.050Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:18:19.054Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:10.100Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:19:10.110Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:13.614Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:19:13.623Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:13.630Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:19:13.637Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:14.865Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:19:14.872Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:19:14.880Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:19:14.888Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:29.152Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:22:29.159Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:29.170Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:22:29.175Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:30.441Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:22:30.458Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:22:30.484Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:22:30.490Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:25:37.434Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:25:37.439Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:25:37.575Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:25:37.578Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> 
+2026-03-13T14:25:45.879Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:25:45.882Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> 
+2026-03-13T14:29:40.549Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:29:40.935Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> Request failed with status code 404
+2026-03-13T14:29:41.965Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/deposit -> http://localhost:5002/wallet/deposit
+2026-03-13T14:29:42.009Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/deposit -> Request failed with status code 404
+2026-03-13T14:31:22.375Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:31:22.420Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:22.455Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:31:22.462Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:29.495Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:31:32.257Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:31:32.284Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:32.290Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:31:32.297Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:31:36.035Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/create -> http://localhost:5002/wallet/create
+2026-03-13T14:31:36.038Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/create -> Request failed with status code 404
+2026-03-13T14:31:46.783Z [[32minfo[39m]: [Gateway] Forwarding POST /api/wallet/create -> http://localhost:5002/wallet/create
+2026-03-13T14:31:46.788Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/create -> Request failed with status code 404
+2026-03-13T14:34:15.722Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:34:15.779Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:34:15.813Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:34:15.821Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:34:31.231Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T14:34:31.484Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:34:31.491Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:34:31.496Z [[32minfo[39m]: [Gateway] Forwarding GET /api/wallet/balance -> http://localhost:5002/wallet/balance
+2026-03-13T14:34:31.501Z [[31merror[39m]: [Gateway Error] undefined /api/wallet/balance -> Request failed with status code 404
+2026-03-13T14:48:21.931Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T15:10:14.268Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/register -> http://localhost:5001/auth/register
+2026-03-13T15:10:38.478Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
+2026-03-13T15:17:38.318Z [[32minfo[39m]: [Gateway] Forwarding POST /api/auth/login -> http://localhost:5001/auth/login
