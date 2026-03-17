@@ -26,8 +26,17 @@ export default function Login() {
       navigate("/dashboard"); 
     } catch (err) {
       console.error("Login Error:", err);
-      // Detailed error message from server or fallback
-      setError(err.response?.data?.message || err.response?.data?.error || "Login failed");
+      
+      // Check for email verification error
+      const errorMessage = err.response?.data?.details?.error || err.response?.data?.error || err.response?.data?.message;
+      
+      if (errorMessage === "Please verify your email first") {
+        setError("Email verification required. Check your inbox for a verification link.");
+      } else if (errorMessage?.includes("Invalid credentials")) {
+        setError("Incorrect email or password. Please try again.");
+      } else {
+        setError(errorMessage || "Login failed. Please try again.");
+      }
     }
   };
 
@@ -76,8 +85,16 @@ export default function Login() {
         </div>
 
         {error && (
-          <div className="mt-4 p-2 bg-red-100 border border-red-400 text-red-700 text-sm rounded text-center">
-            {error}
+          <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 text-sm rounded">
+            <p className="font-semibold">⚠️ {error}</p>
+            {error.includes("verification") && (
+              <p className="mt-2 text-xs">
+                Didn't receive the email? Check your spam folder or{" "}
+                <Link to="/register" className="underline font-semibold">
+                  register again
+                </Link>
+              </p>
+            )}
           </div>
         )}
 
