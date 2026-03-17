@@ -1,0 +1,47 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies and lint frontend
+      run: |
+        cd finflow-frontend
+        npm ci
+        npm run lint
+
+    - name: Install dependencies and test api-gateway
+      run: |
+        cd services/api-gateway
+        npm ci
+        npm test || echo "No tests defined for api-gateway"
+
+    - name: Install dependencies and test user-service
+      run: |
+        cd services/user-service
+        npm ci
+        npm test
+
+    - name: Install dependencies and test transaction-service
+      run: |
+        cd services/transaction-service
+        npm ci
+        npm test || echo "No tests defined for transaction-service"
+
+    - name: Install dependencies and test wallet-service
+      run: |
+        cd services/wallet-service
+        npm ci
+        npm test || echo "No tests defined for wallet-service"

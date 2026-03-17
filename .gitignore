@@ -4,7 +4,7 @@
 # Security: Ignore all secret files
 **/.env
 **/.env.local
-
+.env.example
 # Build folders
 **/dist/
 **/build/

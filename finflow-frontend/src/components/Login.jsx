@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 // Fix: Use curly braces for named import and use authAPI
 import { authAPI } from "../api/api"; 
 import { AuthContext } from "../context/AuthContext";
@@ -68,6 +68,12 @@ export default function Login() {
         >
           Login
         </button>
+
+        <div className="mt-4 text-center">
+          <Link to="/forgot-password" className="text-blue-500 text-sm hover:underline">
+            Forgot Password?
+          </Link>
+        </div>
 
         {error && (
           <div className="mt-4 p-2 bg-red-100 border border-red-400 text-red-700 text-sm rounded text-center">

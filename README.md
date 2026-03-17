@@ -1,19 +1,28 @@
 # FinFlow Platform
 
-A modern, secure digital banking and financial management platform built with a microservices architecture. FinFlow provides users with a seamless experience for managing wallets, performing transactions, and tracking financial activities.
+FinFlow is a modern digital banking and financial management platform built using a microservices architecture. The system is designed to simulate real-world financial applications by providing secure, scalable, and modular services for managing user accounts, wallets, and financial transactions.
+
+The backend is structured into independent services, including a User Service for authentication and profile management, a Wallet Service for balance management and fund transfers, and a Transaction Service for logging and tracking financial activities. An API Gateway acts as a centralized entry point, handling request routing, authentication, and communication between services.
+
+The platform implements secure authentication using JWT and bcrypt, ensuring safe handling of user credentials and protected access to resources. Users can perform deposits, withdrawals, and peer-to-peer transfers, with all actions recorded in a transaction history system that supports filtering and pagination.
+
+The frontend is built with React and Tailwind CSS, providing a responsive and user-friendly interface for interacting with the system. The application is deployed in a cloud environment with environment-based configurations, and structured to support containerization with Docker and automated workflows using CI/CD pipelines.
+
+FinFlow demonstrates key backend engineering concepts including microservices architecture, API Gateway design, service isolation, and scalable system design, making it a strong representation of production-oriented fullstack development.
 
 ##  Features
 
-- **User Authentication & Profiles**: Secure registration, login, and profile management with JWT tokens
+- **User Authentication & Profiles**: Secure registration, login, email verification, and password reset with JWT tokens
 - **Wallet Management**: Create and manage digital wallets with real-time balance tracking
-- **Transaction Processing**: Deposit, withdraw, and transfer funds with full audit trails
+- **Transaction Processing**: Deposit, withdraw, and transfer funds with full audit trails and email notifications
 - **Transaction History**: Comprehensive activity log with filtering and pagination
+- **Email Notifications**: Automated email alerts for all financial transactions
 - **Responsive UI**: Modern React frontend with Tailwind CSS for mobile and desktop
 - **Microservices Architecture**: Scalable backend with independent services
 - **API Gateway**: Centralized routing and authentication proxy
 - **Database Security**: Distributed MongoDB with proper access controls
 
-## 🚀 Live Demo
+## Live Demo
 
 Experience FinFlow in action! The application is deployed on Render with the following services:
 
@@ -29,7 +38,12 @@ Experience FinFlow in action! The application is deployed on Render with the fol
 3. Create a wallet and perform transactions
 4. View your transaction history
 
-## Architecture
+
+## Architecture Decisions
+
+- Microservices used for scalability and service isolation
+- API Gateway centralizes authentication and routing
+- Separate databases per service for loose coupling
 
 ```
 ┌─────────────────┐    ┌─────────────────┐
@@ -151,12 +165,18 @@ PORT=5001
 JWT_SECRET=your-secret-key
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/finflow-users
 GATEWAY_URL=http://localhost:5000/api
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+FRONTEND_URL=http://localhost:3000
 ```
 
 **wallet-service/.env**
 ```
 PORT=5002
 JWT_SECRET=your-secret-key
+USER_SERVICE_URL=http://localhost:5001
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/finflow-wallet
 GATEWAY_URL=http://localhost:5000/api
 TRANSACTION_SERVICE_URL=http://localhost:5003
@@ -194,6 +214,9 @@ The frontend will run on `http://localhost:5173`
 ### Authentication
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
+- `GET /api/auth/verify/:token` - Email verification
+- `POST /api/auth/forgot-password` - Request password reset
+- `POST /api/auth/reset-password` - Reset password
 - `GET /api/profile` - Get user profile
 
 ### Wallet

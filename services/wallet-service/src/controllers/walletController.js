@@ -1,17 +1,18 @@
 import Wallet from "../models/wallet.js";
 import axios from "axios";
+import { sendTransactionNotification } from "../services/emailService.js";
 
-// Helper to notify Transaction Service
-const logTransaction = async (data, token) => {
+// Helper to get user email
+const getUserEmail = async (userId, token) => {
   try {
-    const TRANSACTION_URL = process.env.TRANSACTION_SERVICE_URL;
-    // We forward the user's token so the Transaction Service can authenticate the request
-    await axios.post(`${TRANSACTION_URL}/transactions/internal/record`, data, {
+    const USER_URL = process.env.USER_SERVICE_URL || "http://localhost:5001";
+    const response = await axios.get(`${USER_URL}/profile/${userId}`, {
       headers: { Authorization: token }
     });
-    console.log(`Audit Log Success: ${data.type}`);
+    return response.data.email;
   } catch (err) {
-    console.error("Critical: Audit Log Failed:", err.response?.data || err.message);
+    console.error("Failed to get user email:", err.message);
+    return null;
   }
 };
 
@@ -69,6 +70,16 @@ export const deposit = async (req, res) => {
       description: 'Funds added via Dashboard'
     }, token);
 
+    // Send notification
+    const email = await getUserEmail(userId, token);
+    if (email) {
+      try {
+        await sendTransactionNotification(email, 'DEPOSIT', amount);
+      } catch (err) {
+        console.error("Notification failed:", err.message);
+      }
+    }
+
     res.json({ message: "Deposit successful", balance: wallet.balance });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -94,6 +105,16 @@ export const withdraw = async (req, res) => {
       balanceAfter: wallet.balance,
       description: 'ATM Withdrawal/Payout'
     }, token);
+
+    // Send notification
+    const email = await getUserEmail(userId, token);
+    if (email) {
+      try {
+        await sendTransactionNotification(email, 'WITHDRAWAL', amount);
+      } catch (err) {
+        console.error("Notification failed:", err.message);
+      }
+    }
 
     res.json({ message: "Withdrawal successful", balance: wallet.balance });
   } catch (err) {
@@ -130,7 +151,17 @@ export const transfer = async (req, res) => {
       relatedUser: recipientId,
       description: `Sent money to ${recipientId}`
     }, token);
+// Send notification to sender
+    const email = await getUserEmail(senderId, token);
+    if (email) {
+      try {
+        await sendTransactionNotification(email, 'TRANSFER', amount);
+      } catch (err) {
+        console.error("Notification failed:", err.message);
+      }
+    }
 
+    
     await logTransaction({
       userId: recipientId,
       type: 'TRANSFER_RECEIVE',
