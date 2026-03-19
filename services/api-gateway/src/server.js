@@ -32,5 +32,5 @@ app.use(errorHandler);
 
 app.get("/", (req, res) => res.send("FinFlow API Gateway Live"));
 
-const PORT = process.env.PORT || 8080; // Changed to 8080 to avoid conflict with services
+const PORT = process.env.PORT || 5000; 
 app.listen(PORT, () => logger.info(`Gateway active on port ${PORT}`));

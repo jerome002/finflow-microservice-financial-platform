@@ -17,8 +17,7 @@ app.use(express.json());
 
 connectDB();
 
-// 1. Ensure the leading slash is there
-// 2. Ensure this is the ONLY place '/api/wallet' is mentioned
+
 app.use("/wallet", walletRoutes); 
 
 app.get("/", (req, res) => res.send("Wallet Service Running"));
