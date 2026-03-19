@@ -2,20 +2,34 @@ import axios from 'axios';
 
 /**
  * Normalizes the Gateway URL. 
- * If using Vite's env vars, it uses that; otherwise, it falls back to local.
  */
 const GATEWAY_URL = import.meta.env.VITE_GATEWAY_URL || 'http://localhost:5000/api';
 
 // Create the unified axios instance
 const api = axios.create({ 
   baseURL: GATEWAY_URL,
-  // Professional necessity: allows cookies/headers to pass through the gateway
-  withCredentials: true 
+  withCredentials: true,
+  // FIX: Increased timeout to 60s to handle Render "Cold Starts"
+  timeout: 60000 
 });
 
 /**
+ * Wake-up Utility (Cold Start Fix)
+ * Call this in your App.jsx useEffect to trigger the Render "Spin up" process early.
+ */
+export const pokeServer = async () => {
+  try {
+    // Just a simple GET to any public route (like a health check)
+    await api.get('/auth/health'); 
+    console.log("Server is awake and ready.");
+  } catch (err) {
+    // We expect a 404 or 200; we just need to hit the server to wake it
+    console.log("Server pinged.");
+  }
+};
+
+/**
  * Request Interceptor
- * Automatically attaches the JWT from localStorage to every request.
  */
 api.interceptors.request.use(
   (config) => {
@@ -31,21 +45,24 @@ api.interceptors.request.use(
 );
 
 /**
- * Response Interceptor (Optional but Recommended)
- * Catch 401 errors globally to redirect users to login if their token expires.
+ * Response Interceptor
  */
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    // Handle Timeouts specifically for better UX
+    if (error.code === 'ECONNABORTED') {
+      console.error("Request timed out. Server is taking too long to wake up.");
+    }
+    
     if (error.response?.status === 401) {
-      // localStorage.removeItem('token');
-      // window.location.href = '/login';
+      // Optional: localStorage.removeItem('token');
     }
     return Promise.reject(error);
   }
 );
 
-// Named exports to maintain compatibility with your existing components
+// Named exports
 export const authAPI = api; 
 export const walletAPI = api;
 export default api;

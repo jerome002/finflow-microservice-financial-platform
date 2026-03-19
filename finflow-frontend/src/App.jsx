@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, AuthContext } from "./context/AuthContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react"; // Added useEffect
+import { pokeServer } from "./api/api"; // Import the wake-up utility
 
 // Components
 import Navbar from "./components/Navbar";
@@ -17,6 +18,11 @@ import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
 
 function App() {
+  // FIX: Trigger the "Wake Up" call for Render's Free Tier
+  useEffect(() => {
+    pokeServer();
+  }, []);
+
   return (
     <AuthProvider>
       <Router>
