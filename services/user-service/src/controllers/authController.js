@@ -50,7 +50,7 @@ export const resendVerification = async (req, res) => {
 };
 */
 
-export const verifyEmail = async (req, res) => {
+/**export const verifyEmail = async (req, res) => {
   try {
     const { token } = req.params;
     const user = await verifyUserEmail(token);
@@ -59,7 +59,7 @@ export const verifyEmail = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
-
+*/
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;

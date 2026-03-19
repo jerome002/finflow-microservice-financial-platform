@@ -51,7 +51,7 @@ export default function Register() {
             <input
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition"
               type="text"
-              placeholder="John Doe"
+              placeholder="Your Full Name."
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
