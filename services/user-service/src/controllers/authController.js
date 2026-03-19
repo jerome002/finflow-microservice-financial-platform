@@ -8,6 +8,7 @@ import {
   createPasswordResetToken, 
   resetPassword 
 } from "../services/userService.js";
+// Keeping imports but they won't be called
 import { sendVerificationEmail, sendPasswordResetEmail } from "../services/emailService.js";
 
 dotenv.config();
@@ -18,44 +19,36 @@ export const register = async (req, res) => {
     const hashed = await bcrypt.hash(password, 10);
     const user = await createUser({ name, email, password: hashed });
     
-    await sendVerificationEmail(user.email, user.verificationToken);
+    // COMMENTED OUT: Stop trying to send emails (prevents Render timeouts)
+    // await sendVerificationEmail(user.email, user.verificationToken);
     
     res.status(201).json({ 
-      message: "User registered. Please check your email to verify your account.", 
+      message: "User registered successfully!", 
       user: { id: user.id, name, email } 
     });
   } catch (err) {
-    // Professional Tip: Standardize error object for frontend consumption
     res.status(400).json({ error: err.message || "Registration failed" });
   }
 };
 
 /**
- * NEW: Resend Verification Email
- * Allows users (and you) to trigger a new email if the first one failed/timed out.
+ * DISABLED: Resend Verification Email
+ * Commented out to prevent ReferenceErrors in authRoutes.js
  */
+/*
 export const resendVerification = async (req, res) => {
   try {
     const { email } = req.body;
     const user = await findUserByEmail(email);
-
-    if (!user) {
-      return res.status(404).json({ error: "No account found with this email." });
-    }
-
-    if (user.emailVerified) {
-      return res.status(400).json({ error: "Account is already verified. Please log in." });
-    }
-
-    // Trigger the email service
-    await sendVerificationEmail(user.email, user.verificationToken);
-
-    res.json({ message: "A new verification link has been sent to your email." });
+    if (!user) return res.status(404).json({ error: "No account found." });
+    
+    // await sendVerificationEmail(user.email, user.verificationToken);
+    res.json({ message: "Verification skipped for development." });
   } catch (err) {
-    console.error("Resend Error:", err.message);
-    res.status(500).json({ error: "Failed to resend verification email. Please try again later." });
+    res.status(500).json({ error: "Failed to resend." });
   }
 };
+*/
 
 export const verifyEmail = async (req, res) => {
   try {
@@ -74,10 +67,12 @@ export const login = async (req, res) => {
     
     if (!user) return res.status(400).json({ error: "Invalid credentials" });
 
-    // This block triggers the "Resend" button on your frontend
+    // COMMENTED OUT: Bypass verification check so you can log in immediately
+    /*
     if (!user.emailVerified) {
-      return res.status(400).json({ error: "Please verify your email first before logging in." });
+      return res.status(400).json({ error: "Please verify your email first." });
     }
+    */
 
     const match = await bcrypt.compare(password, user.password);
     if (!match) return res.status(400).json({ error: "Invalid credentials" });
@@ -102,8 +97,9 @@ export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
     const resetToken = await createPasswordResetToken(email);
-    await sendPasswordResetEmail(email, resetToken);
-    res.json({ message: "Password reset email sent" });
+    // COMMENTED OUT: Prevent email sending for password reset
+    // await sendPasswordResetEmail(email, resetToken);
+    res.json({ message: "Password reset logic triggered (email sending disabled)" });
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
