@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-// Fix: Use curly braces for named import and use authAPI
 import { authAPI } from "../api/api"; 
 import { AuthContext } from "../context/AuthContext";
 
@@ -9,48 +8,63 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [resendLoading, setResendLoading] = useState(false); // Added for UX
+  const [resendMessage, setResendMessage] = useState(""); // Added for feedback
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError(""); 
+    setResendMessage("");
     
     try {
-      // Fix: Use authAPI instead of API
       const res = await authAPI.post("/auth/login", { email, password });
-      
-      // Update context and storage
       login(res.data.token, res.data.user);
-      
-      // Redirect to dashboard
       navigate("/dashboard"); 
     } catch (err) {
       console.error("Login Error:", err);
-      
-      // Check for email verification error
       const errorMessage = err.response?.data?.details?.error || err.response?.data?.error || err.response?.data?.message;
       
-      if (errorMessage === "Please verify your email first") {
-        setError("Email verification required. Check your inbox for a verification link.");
+      // Keep your specific logic for identifying the verification error
+      if (errorMessage?.includes("verify your email first")) {
+        setError("Email verification required. Check your inbox.");
       } else if (errorMessage?.includes("Invalid credentials")) {
-        setError("Incorrect email or password. Please try again.");
+        setError("Incorrect email or password.");
       } else {
         setError(errorMessage || "Login failed. Please try again.");
       }
     }
   };
 
+  /**
+   * Action: Triggers the new Backend Controller
+   */
+  const handleResendEmail = async () => {
+    setResendLoading(true);
+    setResendMessage("");
+    try {
+      await authAPI.post("/auth/resend-verification", { email });
+      setResendMessage("Verification email resent! Please check your inbox (and spam).");
+      setError(""); // Clear the error once success happens
+    } catch (err) {
+      const msg = err.response?.data?.error || "Failed to resend email.";
+      setError(msg);
+    } finally {
+      setResendLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
         
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
           <input
             className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             type="email"
-            placeholder="Email"
+            placeholder="your@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -63,7 +77,7 @@ export default function Login() {
           <input
             className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             type="password"
-            placeholder="Password"
+            placeholder="••••••••"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -79,33 +93,44 @@ export default function Login() {
         </button>
 
         <div className="mt-4 text-center">
-          <Link to="/forgot-password" className="text-blue-500 text-sm hover:underline">
+          <Link to="/forgot-password" name="forgot" className="text-blue-500 text-sm hover:underline">
             Forgot Password?
           </Link>
         </div>
 
+        {/* Error Notification with functional Resend Button */}
         {error && (
-          <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 text-sm rounded">
-            <p className="font-semibold">⚠️ {error}</p>
-            {error.includes("verification") && (
-              <p className="mt-2 text-xs">
-                Didn't receive the email? Check your spam folder or{" "}
-                <Link to="/register" className="underline font-semibold">
-                  register again
-                </Link>
-              </p>
+          <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded">
+            <p> {error}</p>
+            {error.includes("verify") && (
+              <button
+                type="button"
+                onClick={handleResendEmail}
+                disabled={resendLoading}
+                className="mt-2 text-blue-600 font-bold hover:underline block text-xs"
+              >
+                {resendLoading ? "Sending..." : "Didn't get the link? Click to Resend"}
+              </button>
             )}
           </div>
         )}
 
-        <p className="mt-4 text-center text-sm text-gray-600">
+        {/* Success Message for Resend */}
+        {resendMessage && (
+          <div className="mt-4 p-3 bg-green-50 border border-green-200 text-green-700 text-sm rounded font-medium">
+             {resendMessage}
+          </div>
+        )}
+
+        <p className="mt-6 text-center text-sm text-gray-600">
           Don't have an account?{" "}
-          <span 
-            className="text-blue-500 cursor-pointer hover:underline" 
+          <button 
+            type="button"
+            className="text-blue-500 font-semibold hover:underline" 
             onClick={() => navigate("/register")}
           >
             Register
-          </span>
+          </button>
         </p>
       </form>
     </div>
