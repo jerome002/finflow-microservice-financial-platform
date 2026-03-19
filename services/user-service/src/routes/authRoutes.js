@@ -1,5 +1,5 @@
 import express from "express";
-import { register, login, verifyEmail, forgotPassword, resetPasswordHandler } from "../controllers/authController.js";
+import { register, login, verifyEmail, forgotPassword, resetPasswordHandler,resendVerification} from "../controllers/authController.js";
 
 const router = express.Router();
 router.get("/health", (req, res) => res.status(200).json({ status: "UP" }));
